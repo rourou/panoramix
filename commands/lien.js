@@ -45,6 +45,7 @@ module.exports = {
             client = interaction.client
         } else if (!!interaction.command) { //si reception d'un boutton
             console.log('!!interaction.command:', !!interaction.command)
+            console.log('interaction:', interaction)
             let action = interaction.action
             let tag = interaction.tag
             let user = interaction.user
