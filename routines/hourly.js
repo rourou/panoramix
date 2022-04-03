@@ -45,18 +45,18 @@ const run = async (client) => {
     const userNoDiscordRandom = await getRandomNoDiscord()
     console.log('userNoDiscordRandom:', userNoDiscordRandom)
     //envoi msg si trouvé
-    // if (userNoDiscordRandom) {
-    //     //recuperation et envoi a la commande !!! ATTENTION bien adapté la commande a recevoir les deux interaction différentes !!!
-    //     const command = client.commands.get("lien");
-    //     await command.execute({
-    //         client: client,
-    //         action: "demande",
-    //         tag: userNoDiscordRandom.tagCoc,
-    //         channel: "flood",
-    //         user: 'N/A',
-    //         commandInterne: true
-    //     })
-    // }
+    if (userNoDiscordRandom) {
+        //recuperation et envoi a la commande !!! ATTENTION bien adapté la commande a recevoir les deux interaction différentes !!!
+        const command = client.commands.get("lien");
+        await command.execute({
+            client: client,
+            action: "demande",
+            tag: userNoDiscordRandom.tagCoc,
+            channel: "flood",
+            user: 'N/A',
+            commandInterne: true
+        })
+    }
 
     //mise a jour des infos via api
     for (const clanShearch in clans) {
