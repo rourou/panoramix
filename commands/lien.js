@@ -49,8 +49,8 @@ module.exports = {
             let action = interaction.action
             let tag = interaction.tag
             let user = interaction.user
-            let client = interaction.client
-            let interact = interaction
+            let client = interaction.interaction.client
+            let interact = interaction.interaction
         } else {  //si commande directe
             console.log('commande directe')
             action = interaction.options.get("action").value
