@@ -50,7 +50,9 @@ module.exports = {
             let interact = interaction
         } else {  //si commande directe
             action = interaction.options.get("action").value
-            tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
+            if (action !== "list") {
+                tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
+            }
             interact = interaction
         }
 
