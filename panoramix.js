@@ -17,6 +17,13 @@ const client = new Client({
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
 });
 /*###########################################################################################################################################################*/
+//deploy commands
+const { deployCommands } = require('./deploy-commands')
+const launchDeploy = async () => {
+    await deployCommands()
+}
+launchDeploy()
+/*###########################################################################################################################################################*/
 //initialisation des commandes
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -36,8 +43,6 @@ for (const file of eventFiles) {
     }
 }
 /*###########################################################################################################################################################*/
-//deploy commands
-//require('./deploy-commands')
 
 //login sur discord
 client.login(token);
