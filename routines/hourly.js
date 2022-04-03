@@ -18,22 +18,8 @@ const run = async (client) => {
     }
 
     //recherche d'un membre aléatoirement
-    let membersArray = Object.keys(members)
-    let random = getRandomInt(membersArray.length)
-    console.log('random', random, "/", membersArray.length)
-    let userRandom = members[membersArray[random]]
-    console.log('userRandom', userRandom)
-    //envoi d'un message si pas de user discord
-    // if (!!userRandom.userDiscord && !!userRandom.userDiscord.username) {
-    //     //recuperation et envoi a la commande !!! ATTENTION bien adapté la commande a recevoir les deux interaction différentes !!!
-    //     const command = client.commands.get("lien");
-    //     await command.execute({
-    //         command: "lien",
-    //         action: "demande",
-    //         tag: userRandom.tagCoc,
-    //         client: client
-    //     })
-    // }
+    const userNoDiscordRandom = await getRandomNoDiscord()
+    console.log('userNoDiscordRandom:', userNoDiscordRandom)
 
     //mise a jour des infos via api
     for (const clanShearch in clans) {
@@ -81,3 +67,24 @@ module.exports = {
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+
+const getRandomNoDiscord = () => {
+    let tab = []
+    for (const member in memberCoc) {
+        if (member !== "timeStamp") {
+
+            if (memberCoc[member].userDiscord) {
+                if (!memberCoc[member].userDiscord.username) {
+                    tab.push(memberCoc[member])
+                }
+            } else {
+                tab.push(memberCoc[member])
+            }
+        }
+    }
+    let randomNumber = getRandomInt(tab.length)
+    let userRandom = tab[randomNumber]
+    return userRandom
+
+}
+getRandomNoDiscord()
