@@ -39,16 +39,19 @@ module.exports = {
         let interact = null
 
         if (interaction.commandInterne) { //si commande interne
+            console.log('interaction.commandInterne:', interaction.commandInterne)
             action = interaction.action
             tag = interaction.tag
             client = interaction.client
         } else if (!!interaction.command) { //si reception d'un boutton
+            console.log('!!interaction.command:', !!interaction.command)
             let action = interaction.action
             let tag = interaction.tag
             let user = interaction.user
             let client = interaction.client
             let interact = interaction
         } else {  //si commande directe
+            console.log('commande directe')
             action = interaction.options.get("action").value
             if (action !== "list") {
                 tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
