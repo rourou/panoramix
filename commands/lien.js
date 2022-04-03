@@ -204,6 +204,7 @@ module.exports = {
 
                 try {
                     const playerCoc = await clash.getPlayer(tag)
+                    console.log('playerCoc:', playerCoc)
 
                     const rowDemande = new MessageActionRow()
                         .addComponents(
