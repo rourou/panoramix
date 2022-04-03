@@ -20,6 +20,12 @@ const run = async (client) => {
     //recherche d'un membre aléatoirement
     const userNoDiscordRandom = await getRandomNoDiscord()
     console.log('userNoDiscordRandom:', userNoDiscordRandom)
+    //envoi msg si trouvé
+    if (userNoDiscordRandom) {
+        //recuperation et envoi a la commande !!! ATTENTION bien adapté la commande a recevoir les deux interaction différentes !!!
+        const command = client.commands.get("lien");
+        console.log('command:', command)
+    }
 
     //mise a jour des infos via api
     for (const clanShearch in clans) {
