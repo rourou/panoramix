@@ -48,7 +48,6 @@ const run = async (client) => {
     if (userNoDiscordRandom) {
         //recuperation et envoi a la commande !!! ATTENTION bien adapté la commande a recevoir les deux interaction différentes !!!
         const command = client.commands.get("lien");
-        console.log('command:', command)
         await command.execute({
             client: client,
             action: "add",
