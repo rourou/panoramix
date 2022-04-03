@@ -26,6 +26,7 @@ module.exports = {
     ,
 
     async execute(interaction) {
+        console.log('interaction:', interaction)
 
         //on lit le JSON des membres
         const rawdata = fs.readFileSync(`./datas/membersCoc.json`)
