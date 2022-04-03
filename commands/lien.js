@@ -46,11 +46,11 @@ module.exports = {
         } else if (!!interaction.command) { //si reception d'un boutton
             console.log('!!interaction.command:', !!interaction.command)
             console.log('interaction:', interaction)
-            let action = interaction.action
-            let tag = interaction.tag
-            let user = interaction.user
-            let client = interaction.interaction.client
-            let interact = interaction.interaction
+            action = interaction.action
+            tag = interaction.tag
+            user = interaction.user
+            client = interaction.interaction.client
+            interact = interaction.interaction
         } else {  //si commande directe
             console.log('commande directe')
             action = interaction.options.get("action").value
