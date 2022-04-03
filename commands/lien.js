@@ -2,6 +2,8 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageSelectMenu, MessageButton, MessageEmbed } = require('discord.js');
 const clash = require('../apiCalls/clash')
 const fs = require('fs')
+//json de config
+const { channelFlood } = require('../datas/config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -25,29 +27,39 @@ module.exports = {
 
     async execute(interaction) {
 
-        let action = null
-        //separation pour les deux style de commandes
-        try {
-            action = interaction.options.get("action").value
-        } catch {
-            action = interaction.action
-        }
-        let tag = null
-
-        //on lit le JSON
+        //on lit le JSON des membres
         const rawdata = fs.readFileSync(`./datas/membersCoc.json`)
         let membersCoc = JSON.parse(rawdata)
 
-        //mise en pause de la reponse
-        //await interaction.deferReply();
-        //separation pour les deux style de commandes
+        let action = null
+        let tag = null
+        let user = null
+        //recup de l'action et du tag et user en fonction des deux types de commandes
         try {
-            await interaction.deferReply();
+            action = interaction.options.get("action").value
+            tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
+            user = interaction.user
         } catch {
-            await interaction.interaction.deferReply();
+            action = interaction.action
+            tag = interaction.tag.replaceAll('#', '').toUpperCase()
+            user = interaction.interaction.user
+        }
+
+        //mise en pause de la reponse les deux style de commandes si interaction
+        try {
+            try {
+                await interaction.deferReply();
+            } catch {
+                await interaction.interaction.deferReply();
+            }
+        } catch {
+            console.log("pas d'interaction")
         }
 
         console.log('action:', action)
+        console.log('tag', tag)
+        console.log('user', user)
+
         switch (action) {
 
             case "list":
@@ -90,21 +102,10 @@ module.exports = {
             case "add":
 
                 try {
-                    //separation pour les deux style de commandes
-                    let user
-                    try {
-                        tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
-                        user = interaction.user
-                    } catch {
-                        tag = interaction.tag.replaceAll('#', '').toUpperCase()
-                        user = interaction.interaction.user
-                    }
 
                     if (!membersCoc[`#${tag}`]) {
                         throw 'erreur'
                     }
-
-                    console.log("user", user)
 
                     membersCoc = {
                         ...membersCoc,
@@ -152,13 +153,10 @@ module.exports = {
             case "suppr":
 
                 try {
-                    tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
 
                     if (!membersCoc[`#${tag}`]) {
                         throw 'erreur'
                     }
-
-                    console.log("user", interaction.user)
 
                     membersCoc = {
                         ...membersCoc,
@@ -174,7 +172,7 @@ module.exports = {
                     const embedSuppr = new MessageEmbed()
                         .setColor('#ffffff')
                         .addFields(
-                            { name: `C'est fait ${interaction.user.username}`, value: `tu n'est plus le chef du village ${membersCoc[`#${tag}`].nameCoc} ` }
+                            { name: `C'est fait ${user.username}`, value: `tu n'est plus le chef du village ${membersCoc[`#${tag}`].nameCoc} ` }
                         )
 
                     await interaction.editReply({ ephemeral: false, embeds: [embedSuppr] });
@@ -195,7 +193,6 @@ module.exports = {
             case "demande":
 
                 try {
-                    tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
                     const playerCoc = await clash.getPlayer(tag)
 
                     const rowDemande = new MessageActionRow()
@@ -216,7 +213,17 @@ module.exports = {
                             { name: `\u200B`, value: `👇🏻 Clique sur le bouton si tu en es tu le chef ` },
                         )
 
-                    await interaction.editReply({ ephemeral: true, embeds: [embedDemande], components: [rowDemande] });
+                    if (interaction.channel === "flood") {
+                        const channel = await client.channels.fetch(channelFlood) //id du flood
+                            .then((channel) => { return channel })
+                            .catch((err) => { return null })
+
+                        //envoi du message
+                        channel.send({ ephemeral: true, embeds: [embedDemande], components: [rowDemande] })
+                    } else {
+                        await interaction.editReply({ ephemeral: true, embeds: [embedDemande], components: [rowDemande] });
+                    }
+
                 } catch (error) {
                     console.log('error:', error)
                     const embedError = new MessageEmbed()

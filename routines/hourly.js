@@ -52,7 +52,8 @@ const run = async (client) => {
         await command.execute({
             client: client,
             action: "add",
-            tag: userNoDiscordRandom.tagCoc
+            tag: userNoDiscordRandom.tagCoc,
+            channel: "flood"
         })
     }
 
