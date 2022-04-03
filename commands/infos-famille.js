@@ -39,18 +39,7 @@ module.exports = {
                 { name: 'Lien', value: ' https://link.clashofclans.com/fr?action=OpenClanProfile&tag=YV902CU', inline: true },
                 { name: 'Description', value: recup.asterix.description }
             )
-        const embed_4 = new MessageEmbed()
-            .setColor('#ffffff')
-            .setTitle(`CLAN 3 : ALPHA CORPS (${recup.alpha.members}/50)`)
-            .setURL('https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2LYU98Q2')
-            .setDescription('Clan avec pour objectif Rush régulier et stratégie en GdC')
-            .setThumbnail(recup.alpha.badgeUrls.medium)
-            .addFields(
-                { name: 'Tag ', value: '#2LYU98Q2' },
-                { name: 'Lien', value: 'https://link.clashofclans.com/fr?action=OpenClanProfile&tag=2LYU98Q2', inline: true },
-                { name: 'Description', value: recup.alpha.description }
-            )
 
-        await interaction.reply({ ephemeral: false, embeds: [embed_1, embed_2, embed_3, embed_4] })
+        await interaction.reply({ ephemeral: false, embeds: [embed_1, embed_2, embed_3] })
     },
 };
