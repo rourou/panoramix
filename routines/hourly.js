@@ -2,11 +2,20 @@ const fs = require('node:fs');
 const clash = require('../apiCalls/clash')
 const clans = require('../datas/clans.json')
 const memberCoc = require(`../datas/membersCoc.json`)
-
+//moment
+const moment = require('moment')
+moment.locale('fr')
 
 const run = async (client) => {
 
     let members = memberCoc
+
+    //recup de la date
+    const jsonDate = {
+        day: moment().date(),
+        month: moment().month(),
+        year: moment().year()
+    }
 
     //recherche d'un membre aléatoirement
     let membersArray = Object.keys(members)
@@ -57,7 +66,7 @@ const run = async (client) => {
     //ajout du timestamp
     members = {
         ...members,
-        timeStamp: new Date()
+        timeStamp: jsonDate
     }
     //ecriture dans le json de cache
     let data = JSON.stringify(members, null, 2)
