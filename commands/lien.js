@@ -38,11 +38,12 @@ module.exports = {
         try {
             action = interaction.options.get("action").value
             tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
-
         } catch {
             action = interaction.action
-            tag = interaction.tag.replaceAll('#', '').toUpperCase()
-
+            try {
+                tag = interaction.tag.replaceAll('#', '').toUpperCase()
+            } catch {
+            }
         }
 
         //mise en pause de la reponse les deux style de commandes si interaction
