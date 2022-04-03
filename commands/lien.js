@@ -38,7 +38,7 @@ module.exports = {
         let client = null
         let interact = null
 
-        if (commandInterne) { //si commande interne
+        if (interaction.commandInterne) { //si commande interne
             action = interaction.action
             tag = interaction.tag
             client = interaction.client
