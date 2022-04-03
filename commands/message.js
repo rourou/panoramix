@@ -37,7 +37,7 @@ module.exports = {
                 break;
         }
 
-        const channel = await client.channels.fetch(channelToSend) //id du flood
+        const channel = await interaction.client.channels.fetch(channelToSend) //id du flood
             .then((channel) => { return channel })
             .catch((err) => { return null })
 
