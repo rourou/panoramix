@@ -18,7 +18,6 @@ module.exports = {
                 .setRequired(true)
                 .addChoice('Armee', 'armee')
                 .addChoice('Asterix', 'asterix')
-                .addChoice('Alpha-corp', 'alpah-corp')
                 .addChoice('Tous', 'tous')
         )
         .addStringOption(option =>
