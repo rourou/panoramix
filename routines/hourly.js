@@ -6,6 +6,30 @@ const memberCoc = require(`../datas/membersCoc.json`)
 const moment = require('moment')
 moment.locale('fr')
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+const getRandomNoDiscord = () => {
+    let tab = []
+    for (const member in memberCoc) {
+        if (member !== "timeStamp") {
+
+            if (memberCoc[member].userDiscord) {
+                if (!memberCoc[member].userDiscord.username) {
+                    tab.push(memberCoc[member])
+                }
+            } else {
+                tab.push(memberCoc[member])
+            }
+        }
+    }
+    let randomNumber = getRandomInt(tab.length)
+    let userRandom = tab[randomNumber]
+    return userRandom
+
+}
+
 const run = async (client) => {
 
     let members = memberCoc
@@ -25,6 +49,11 @@ const run = async (client) => {
         //recuperation et envoi a la commande !!! ATTENTION bien adapté la commande a recevoir les deux interaction différentes !!!
         const command = client.commands.get("lien");
         console.log('command:', command)
+        await command.execute({
+            client: client,
+            action: "add",
+            tag: userNoDiscordRandom.tagCoc
+        })
     }
 
     //mise a jour des infos via api
@@ -69,28 +98,3 @@ const run = async (client) => {
 module.exports = {
     run: run
 }
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
-const getRandomNoDiscord = () => {
-    let tab = []
-    for (const member in memberCoc) {
-        if (member !== "timeStamp") {
-
-            if (memberCoc[member].userDiscord) {
-                if (!memberCoc[member].userDiscord.username) {
-                    tab.push(memberCoc[member])
-                }
-            } else {
-                tab.push(memberCoc[member])
-            }
-        }
-    }
-    let randomNumber = getRandomInt(tab.length)
-    let userRandom = tab[randomNumber]
-    return userRandom
-
-}
-getRandomNoDiscord()
