@@ -213,7 +213,7 @@ module.exports = {
                         )
 
                     if (interaction.channel === "flood") {
-                        const channel = await client.channels.fetch(channelFlood) //id du flood
+                        const channel = await interaction.client.channels.fetch(channelFlood) //id du flood
                             .then((channel) => { return channel })
                             .catch((err) => { return null })
 
