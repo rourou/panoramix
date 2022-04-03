@@ -40,11 +40,11 @@ module.exports = {
 
         if (interaction.commandInterne) { //si commande interne
             action = interaction.action
-            tag = interaction.tag
+            tag = interaction.tag.replaceAll('#', '').toUpperCase()
             client = interaction.client
         } else if (!!interaction.command) { //si reception d'un boutton
             action = interaction.action
-            tag = interaction.tag
+            tag = interaction.tag.replaceAll('#', '').toUpperCase()
             user = interaction.user
             client = interaction.interaction.client
             interact = interaction.interaction
@@ -204,8 +204,6 @@ module.exports = {
 
                 try {
                     const playerCoc = await clash.getPlayer(tag)
-                    console.log('tag:', tag)
-                    console.log('playerCoc:', playerCoc)
 
                     const rowDemande = new MessageActionRow()
                         .addComponents(
