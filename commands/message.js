@@ -23,7 +23,7 @@ module.exports = {
     async execute(interaction) {
 
         let channelToSend
-        let message = interaction.options.get("message").value
+        let message = interaction.options.get("texte").value
 
         switch (interaction.options.get("channel").value) {
             case "flood":
