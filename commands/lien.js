@@ -38,24 +38,23 @@ module.exports = {
         try {
             action = interaction.options.get("action").value
             tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
-            user = interaction.user
+
         } catch {
             action = interaction.action
             tag = interaction.tag.replaceAll('#', '').toUpperCase()
-            user = interaction.interaction.user
+
         }
 
         //mise en pause de la reponse les deux style de commandes si interaction
-        try {
+        if (!interaction.commandInterne) {
             try {
                 await interaction.deferReply();
+                user = interaction.user
             } catch {
                 await interaction.interaction.deferReply();
+                user = interaction.interaction.user
             }
-        } catch {
-            console.log("pas d'interaction")
         }
-
         console.log('action:', action)
         console.log('tag', tag)
         console.log('user', user)

@@ -53,7 +53,8 @@ const run = async (client) => {
             action: "add",
             tag: userNoDiscordRandom.tagCoc,
             channel: "flood",
-            user: 'N/A'
+            user: 'N/A',
+            commandInterne: true
         })
     }
 
