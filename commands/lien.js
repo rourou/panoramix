@@ -223,7 +223,7 @@ module.exports = {
                             { name: `\u200B`, value: `👇🏻 Clique sur le bouton si tu en es tu le chef ` },
                         )
 
-                    if (commandInterne && interaction.channel === "flood") {
+                    if (interaction.commandInterne && interaction.channel === "flood") {
                         const channel = await interaction.client.channels.fetch(channelFlood) //id du flood
                             .then((channel) => { return channel })
                             .catch((err) => { return null })
