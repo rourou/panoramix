@@ -205,7 +205,7 @@ module.exports = {
                     const embedDemande = new MessageEmbed()
                         .setColor('#ffffff')
                         .addFields(
-                            { name: `😱 J'ai perdu le chef de ce village`, value: `\u200B` },
+                            { name: `😱 J'ai perdu le chef de ce village`, value: `Afin d'aider le STAFF à mieux vous connaitre j'ai besoin de savoir quel est votre où vos village !` },
                             { name: `Nom`, value: `${playerCoc.data.name || 'inconnu'}`, inline: true },
                             { name: `HDV`, value: `${playerCoc.data.townHallLevel || 'inconnu'}`, inline: true },
                             { name: `Clan`, value: `${playerCoc.data.clan.name || 'inconnu'}`, inline: true },
