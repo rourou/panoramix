@@ -863,5 +863,9 @@
     "defenseWins": 0,
     "attackWins": 17
   },
-  "timeStamp": "2022-04-03T13:00:46.184Z"
+  "timeStamp": {
+    "day": 3,
+    "month": 3,
+    "year": 2022
+  }
 }
