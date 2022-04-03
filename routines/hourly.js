@@ -50,7 +50,7 @@ const run = async (client) => {
         const command = client.commands.get("lien");
         await command.execute({
             client: client,
-            action: "add",
+            action: "demande",
             tag: userNoDiscordRandom.tagCoc,
             channel: "flood",
             user: 'N/A',
