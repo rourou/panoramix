@@ -35,16 +35,23 @@ module.exports = {
         let action = null
         let tag = null
         let user = null
-        //recup de l'action et du tag et user en fonction des deux types de commandes
-        try {
+        let client = null
+        let interact = null
+
+        if (commandInterne) { //si commande interne
+            action = interaction.action
+            tag = interaction.tag
+            client = interaction.client
+        } else if (!!interaction.command) { //si reception d'un boutton
+            let action = interaction.action
+            let tag = interaction.tag
+            let user = interaction.user
+            let client = interaction.client
+            let interact = interaction
+        } else {  //si commande directe
             action = interaction.options.get("action").value
             tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
-        } catch {
-            action = interaction.action
-            try {
-                tag = interaction.tag.replaceAll('#', '').toUpperCase()
-            } catch {
-            }
+            interact = interaction
         }
 
         //mise en pause de la reponse les deux style de commandes si interaction
@@ -96,7 +103,7 @@ module.exports = {
                     embedNoLink.addField("\u200B", cont);
                 }
 
-                await interaction.editReply({ ephemeral: false, embeds: [embedLink, embedNoLink] })
+                await interact.editReply({ ephemeral: false, embeds: [embedLink, embedNoLink] })
                 break;
 
 
@@ -214,7 +221,7 @@ module.exports = {
                             { name: `\u200B`, value: `👇🏻 Clique sur le bouton si tu en es tu le chef ` },
                         )
 
-                    if (interaction.channel === "flood") {
+                    if (commandInterne && interaction.channel === "flood") {
                         const channel = await interaction.client.channels.fetch(channelFlood) //id du flood
                             .then((channel) => { return channel })
                             .catch((err) => { return null })
