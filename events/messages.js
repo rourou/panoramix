@@ -11,16 +11,15 @@ module.exports = {
         Object.keys(memberCoc).filter((element) => {
             if (!!memberCoc[element].userDiscord && memberCoc[element].userDiscord.id !== undefined) {
                 tabWithDiscord.push(memberCoc[element])
-                console.log('memberCoc[element].userDiscord :', memberCoc[element].userDiscord)
             }
         })
         const userDiscordFound = tabWithDiscord.find(element => element.userDiscord.id === '796650034845843466')
         console.log('userDiscordFound:', userDiscordFound)
 
         if (userDiscordFound) {
-            console.log('userDiscordFound:', !!userDiscordFound)
+            console.log('Trouvé')
         } else {
-            console.log('userDiscordFound:', !userDiscordFound)
+            console.log('Non trouvé')
         }
 
     },
