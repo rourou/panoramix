@@ -19,7 +19,7 @@ function start(client) {
 
     //taches au demarrage
     //goodMorning(client)
-    //hourly.run(client)
+    hourly.run(client)
 
     //tache de mise a jour de la aaa familly toutes les heures
     cron.schedule('00 * * * *', function () {
