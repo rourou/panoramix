@@ -14,12 +14,11 @@ module.exports = {
             }
         })
         const userDiscordFound = tabWithDiscord.find(element => element.userDiscord.id === message.author.id)
-        console.log('userDiscordFound:', userDiscordFound)
 
         if (userDiscordFound) {
-            console.log('Trouvé')
+            console.log('User Discord Trouvé')
         } else {
-            console.log('Non trouvé')
+            console.log('User Discord Non trouvé')
         }
 
     },
