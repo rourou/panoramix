@@ -68,7 +68,7 @@ const run = async (client) => {
             for (const member of infosClan.data.memberList) {
                 //recherche des infos du joueur
                 const infosPlayer = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
-                console.log('nameCoc:', member.name)
+                //console.log('nameCoc:', member.name)
                 members = {
                     ...members,
                     [member.tag]: {

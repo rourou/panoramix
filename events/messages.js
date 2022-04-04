@@ -13,7 +13,7 @@ module.exports = {
                 tabWithDiscord.push(memberCoc[element])
             }
         })
-        const userDiscordFound = tabWithDiscord.find(element => element.userDiscord.id === '796650034845843466')
+        const userDiscordFound = tabWithDiscord.find(element => element.userDiscord.id === message.author.id)
         console.log('userDiscordFound:', userDiscordFound)
 
         if (userDiscordFound) {
