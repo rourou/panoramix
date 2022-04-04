@@ -2,48 +2,48 @@
   "#PYCVCQ92": {
     "nameCoc": "pastaga",
     "tagCoc": "#PYCVCQ92",
-    "donations": 1013,
-    "trophies": 5129,
+    "donations": 1325,
+    "trophies": 5167,
     "defenseWins": 0,
-    "attackWins": 24
+    "attackWins": 28
   },
   "#2VQC9PQ20": {
     "nameCoc": "Symph0ny",
     "tagCoc": "#2VQC9PQ20",
-    "donations": 752,
-    "trophies": 5128,
+    "donations": 859,
+    "trophies": 5203,
     "defenseWins": 0,
-    "attackWins": 43
+    "attackWins": 47
   },
   "#2JPJGU90L": {
     "nameCoc": "Déesse K.",
     "tagCoc": "#2JPJGU90L",
-    "donations": 678,
-    "trophies": 5175,
+    "donations": 944,
+    "trophies": 5233,
     "defenseWins": 1,
-    "attackWins": 36
+    "attackWins": 40
   },
   "#YLVG9Y9G": {
     "nameCoc": "⚡SYSOUS-BZH22⚡",
     "tagCoc": "#YLVG9Y9G",
     "donations": 666,
-    "trophies": 5034,
+    "trophies": 4970,
     "defenseWins": 0,
     "attackWins": 43
   },
   "#8UP280YPR": {
     "nameCoc": "Valérie",
     "tagCoc": "#8UP280YPR",
-    "donations": 31,
-    "trophies": 5024,
+    "donations": 103,
+    "trophies": 5032,
     "defenseWins": 0,
-    "attackWins": 46
+    "attackWins": 50
   },
   "#YU8G989CU": {
     "nameCoc": "♣️Barbe-Noir♠️",
     "tagCoc": "#YU8G989CU",
     "donations": 215,
-    "trophies": 4976,
+    "trophies": 4890,
     "defenseWins": 2,
     "attackWins": 28
   },
@@ -51,31 +51,40 @@
     "nameCoc": "fred",
     "tagCoc": "#Y9CLYJLGY",
     "donations": 601,
-    "trophies": 4976,
+    "trophies": 4952,
     "defenseWins": 1,
     "attackWins": 33
   },
   "#Y88C9988": {
     "nameCoc": "massure",
     "tagCoc": "#Y88C9988",
-    "donations": 637,
-    "trophies": 4870,
+    "donations": 702,
+    "trophies": 4860,
     "defenseWins": 2,
     "attackWins": 15
   },
   "#RQ0YRP88": {
     "nameCoc": "Zerox",
     "tagCoc": "#RQ0YRP88",
-    "donations": 1057,
-    "trophies": 4826,
+    "donations": 1270,
+    "trophies": 4847,
     "defenseWins": 0,
-    "attackWins": 30
+    "attackWins": 31,
+    "userDiscord": {
+      "id": "425637909597519882",
+      "bot": false,
+      "system": false,
+      "flags": 0,
+      "username": "enzo",
+      "discriminator": "9565",
+      "avatar": "e8ff39e4e1d340b839b034ad9deaa00f"
+    }
   },
   "#QRLJC9RQ": {
     "nameCoc": "⭐⭐⭐ALI⭐⭐⭐",
     "tagCoc": "#QRLJC9RQ",
     "donations": 78,
-    "trophies": 4759,
+    "trophies": 4731,
     "defenseWins": 2,
     "attackWins": 1
   },
@@ -83,71 +92,71 @@
     "nameCoc": "Maxouelle",
     "tagCoc": "#YJVC9QJGU",
     "donations": 0,
-    "trophies": 4675,
+    "trophies": 4702,
     "defenseWins": 1,
-    "attackWins": 12
+    "attackWins": 15
   },
   "#20UVJQY90": {
     "nameCoc": "Numerobis",
     "tagCoc": "#20UVJQY90",
-    "donations": 158,
+    "donations": 254,
     "trophies": 4570,
     "defenseWins": 2,
-    "attackWins": 7
+    "attackWins": 8
   },
   "#QQJR8QRYR": {
     "nameCoc": "HiPeRiOn",
     "tagCoc": "#QQJR8QRYR",
-    "donations": 1281,
-    "trophies": 4530,
+    "donations": 1523,
+    "trophies": 4619,
     "defenseWins": 1,
-    "attackWins": 36
+    "attackWins": 43
   },
   "#LJQ0CRVQ": {
     "nameCoc": "Zaka",
     "tagCoc": "#LJQ0CRVQ",
-    "donations": 331,
-    "trophies": 4399,
+    "donations": 355,
+    "trophies": 4370,
     "defenseWins": 1,
-    "attackWins": 25
+    "attackWins": 26
   },
   "#2CUVGY0R": {
     "nameCoc": "Ragnar Lodbrok",
     "tagCoc": "#2CUVGY0R",
     "donations": 0,
-    "trophies": 4376,
+    "trophies": 4368,
     "defenseWins": 1,
-    "attackWins": 12
+    "attackWins": 13
   },
   "#QRLYG0Y2": {
     "nameCoc": "pastachef",
     "tagCoc": "#QRLYG0Y2",
-    "donations": 587,
-    "trophies": 4357,
+    "donations": 659,
+    "trophies": 4390,
     "defenseWins": 2,
-    "attackWins": 14
+    "attackWins": 17
   },
   "#YYPPC9RJV": {
     "nameCoc": "chrisdig",
     "tagCoc": "#YYPPC9RJV",
-    "donations": 250,
-    "trophies": 4309,
+    "donations": 397,
+    "trophies": 4295,
     "defenseWins": 1,
     "attackWins": 18
   },
   "#9R8UVU0P9": {
     "nameCoc": "pasta",
     "tagCoc": "#9R8UVU0P9",
-    "donations": 944,
-    "trophies": 4317,
+    "donations": 1074,
+    "trophies": 4396,
     "defenseWins": 0,
-    "attackWins": 10
+    "attackWins": 14
   },
   "#LU8CG8QQ": {
     "nameCoc": "Julinho_91",
     "tagCoc": "#LU8CG8QQ",
     "donations": 338,
-    "trophies": 4286,
+    "trophies": 4275,
     "defenseWins": 1,
     "attackWins": 21
   },
@@ -155,7 +164,7 @@
     "nameCoc": "Ra$a",
     "tagCoc": "#29PR8U9UQ",
     "donations": 0,
-    "trophies": 4239,
+    "trophies": 4221,
     "defenseWins": 0,
     "attackWins": 0
   },
@@ -163,54 +172,54 @@
     "nameCoc": "Alligators 427",
     "tagCoc": "#L2PRJLV00",
     "donations": 0,
-    "trophies": 4232,
+    "trophies": 4258,
     "defenseWins": 0,
-    "attackWins": 18
+    "attackWins": 20
   },
   "#280PYL9C9": {
     "nameCoc": "cap'taine flamm",
     "tagCoc": "#280PYL9C9",
-    "donations": 357,
-    "trophies": 4138,
+    "donations": 439,
+    "trophies": 4221,
     "defenseWins": 1,
-    "attackWins": 15
+    "attackWins": 20
   },
   "#PYUUPURY": {
     "nameCoc": "Quercus",
     "tagCoc": "#PYUUPURY",
-    "donations": 2714,
-    "trophies": 4144,
+    "donations": 2756,
+    "trophies": 4123,
     "defenseWins": 0,
     "attackWins": 9
   },
   "#PLC89YUCP": {
     "nameCoc": "marco62",
     "tagCoc": "#PLC89YUCP",
-    "donations": 209,
-    "trophies": 4049,
+    "donations": 281,
+    "trophies": 4063,
     "defenseWins": 0,
-    "attackWins": 21
+    "attackWins": 22
   },
   "#29Q8PUG0": {
     "nameCoc": "Titan 1908",
     "tagCoc": "#29Q8PUG0",
     "donations": 0,
-    "trophies": 4037,
+    "trophies": 4027,
     "defenseWins": 0,
     "attackWins": 4
   },
   "#C2PQ2GJQ": {
     "nameCoc": "John dô",
     "tagCoc": "#C2PQ2GJQ",
-    "donations": 112,
-    "trophies": 3910,
+    "donations": 174,
+    "trophies": 3919,
     "defenseWins": 1,
-    "attackWins": 0
+    "attackWins": 2
   },
   "#8JLP8QLJ": {
     "nameCoc": "Nagli",
     "tagCoc": "#8JLP8QLJ",
-    "donations": 414,
+    "donations": 500,
     "trophies": 3823,
     "defenseWins": 2,
     "attackWins": 70
@@ -226,7 +235,7 @@
   "#2LVLVGCRR": {
     "nameCoc": "TM | Djoker",
     "tagCoc": "#2LVLVGCRR",
-    "donations": 45,
+    "donations": 47,
     "trophies": 3648,
     "defenseWins": 3,
     "attackWins": 2
@@ -235,7 +244,7 @@
     "nameCoc": "Adrien⚡️",
     "tagCoc": "#9UVUV09QR",
     "donations": 43,
-    "trophies": 3652,
+    "trophies": 3643,
     "defenseWins": 0,
     "attackWins": 0
   },
@@ -243,23 +252,23 @@
     "nameCoc": "fred02",
     "tagCoc": "#LVP8PJGQP",
     "donations": 366,
-    "trophies": 3541,
+    "trophies": 3515,
     "defenseWins": 0,
-    "attackWins": 17
+    "attackWins": 18
   },
   "#C9UV2Y8Y": {
     "nameCoc": "Morghõtal",
     "tagCoc": "#C9UV2Y8Y",
-    "donations": 3561,
-    "trophies": 3558,
+    "donations": 4093,
+    "trophies": 3581,
     "defenseWins": 0,
-    "attackWins": 11
+    "attackWins": 12
   },
   "#28URQU2GL": {
     "nameCoc": "Ra$a[Th13]",
     "tagCoc": "#28URQU2GL",
     "donations": 0,
-    "trophies": 3370,
+    "trophies": 3356,
     "defenseWins": 0,
     "attackWins": 0
   },
@@ -267,17 +276,17 @@
     "nameCoc": "MARCELIN",
     "tagCoc": "#2VLLCYGRJ",
     "donations": 0,
-    "trophies": 2994,
+    "trophies": 2976,
     "defenseWins": 5,
     "attackWins": 0
   },
   "#J8GQYQPC": {
     "nameCoc": "Orangina",
     "tagCoc": "#J8GQYQPC",
-    "donations": 46,
-    "trophies": 2955,
+    "donations": 94,
+    "trophies": 2972,
     "defenseWins": 2,
-    "attackWins": 26
+    "attackWins": 28
   },
   "#8JR990YLG": {
     "nameCoc": "kezoute84",
@@ -290,15 +299,15 @@
   "#Q20JYRPPC": {
     "nameCoc": "minipasta",
     "tagCoc": "#Q20JYRPPC",
-    "donations": 9,
-    "trophies": 2917,
-    "defenseWins": 0,
-    "attackWins": 16
+    "donations": 51,
+    "trophies": 2961,
+    "defenseWins": 1,
+    "attackWins": 18
   },
   "#YG9CLJY0": {
     "nameCoc": "Alves",
     "tagCoc": "#YG9CLJY0",
-    "donations": 798,
+    "donations": 838,
     "trophies": 2913,
     "defenseWins": 1,
     "attackWins": 1
@@ -314,16 +323,25 @@
   "#29RGCCL2R": {
     "nameCoc": "enzo",
     "tagCoc": "#29RGCCL2R",
-    "donations": 1439,
-    "trophies": 2840,
-    "defenseWins": 0,
-    "attackWins": 0
+    "donations": 1527,
+    "trophies": 2862,
+    "defenseWins": 1,
+    "attackWins": 0,
+    "userDiscord": {
+      "id": "425637909597519882",
+      "bot": false,
+      "system": false,
+      "flags": 0,
+      "username": "enzo",
+      "discriminator": "9565",
+      "avatar": "e8ff39e4e1d340b839b034ad9deaa00f"
+    }
   },
   "#CPL0GYUY": {
     "nameCoc": "NRVAUXMAX",
     "tagCoc": "#CPL0GYUY",
     "donations": 30,
-    "trophies": 2773,
+    "trophies": 2758,
     "defenseWins": 0,
     "attackWins": 0
   },
@@ -331,9 +349,9 @@
     "nameCoc": "WanHedaJinzo",
     "tagCoc": "#9822VPLUY",
     "donations": 126,
-    "trophies": 2718,
+    "trophies": 2695,
     "defenseWins": 1,
-    "attackWins": 35
+    "attackWins": 44
   },
   "#2PV2JVLQ9": {
     "nameCoc": "evan",
@@ -347,9 +365,18 @@
     "nameCoc": "'Barak⛷️",
     "tagCoc": "#PRJPUYCVU",
     "donations": 0,
-    "trophies": 2468,
+    "trophies": 2476,
     "defenseWins": 3,
-    "attackWins": 19
+    "attackWins": 20,
+    "userDiscord": {
+      "id": "767140889658130492",
+      "bot": false,
+      "system": false,
+      "flags": 0,
+      "username": "Lᥙᥴᥲsت",
+      "discriminator": "1221",
+      "avatar": "48a9c88a82e5bc44db90e94f5e6260c0"
+    }
   },
   "#V2Q8009U": {
     "nameCoc": "[SH]KeyZ",
@@ -362,122 +389,122 @@
   "#GQY88VGV": {
     "nameCoc": "Adrien",
     "tagCoc": "#GQY88VGV",
-    "donations": 0,
-    "trophies": 2102,
+    "donations": 45,
+    "trophies": 2141,
     "defenseWins": 5,
-    "attackWins": 14
+    "attackWins": 18
   },
   "#2UQLJGJ2G": {
     "nameCoc": "Symph0ny 2",
     "tagCoc": "#2UQLJGJ2G",
-    "donations": 3694,
-    "trophies": 1694,
-    "defenseWins": 5,
+    "donations": 4180,
+    "trophies": 1748,
+    "defenseWins": 7,
     "attackWins": 34
   },
   "#8V80C8G2R": {
     "nameCoc": "Tortue2Combat",
     "tagCoc": "#8V80C8G2R",
     "donations": 0,
-    "trophies": 1373,
+    "trophies": 1353,
     "defenseWins": 3,
     "attackWins": 11
   },
   "#29LCQYPQY": {
     "nameCoc": "moha",
     "tagCoc": "#29LCQYPQY",
-    "donations": 2509,
-    "trophies": 5085,
+    "donations": 3252,
+    "trophies": 5128,
     "defenseWins": 0,
-    "attackWins": 48
+    "attackWins": 54
   },
   "#YRCPPVUJ": {
     "nameCoc": "Savarog",
     "tagCoc": "#YRCPPVUJ",
-    "donations": 1397,
-    "trophies": 4999,
+    "donations": 1736,
+    "trophies": 4977,
     "defenseWins": 2,
-    "attackWins": 12
+    "attackWins": 13
   },
   "#RPC0UUP2": {
     "nameCoc": "Akibodo",
     "tagCoc": "#RPC0UUP2",
-    "donations": 1004,
-    "trophies": 4892,
+    "donations": 1154,
+    "trophies": 4890,
     "defenseWins": 1,
-    "attackWins": 7
+    "attackWins": 8
   },
   "#2LGQC88GL": {
     "nameCoc": "El Ouaté",
     "tagCoc": "#2LGQC88GL",
     "donations": 85,
-    "trophies": 4737,
+    "trophies": 4771,
     "defenseWins": 2,
-    "attackWins": 4
+    "attackWins": 7
   },
   "#289URQYR2": {
     "nameCoc": "cyril",
     "tagCoc": "#289URQYR2",
-    "donations": 1564,
-    "trophies": 4560,
+    "donations": 1807,
+    "trophies": 4564,
     "defenseWins": 2,
-    "attackWins": 13
+    "attackWins": 14
   },
   "#20JUY8Q2V": {
     "nameCoc": "Logan",
     "tagCoc": "#20JUY8Q2V",
-    "donations": 36,
-    "trophies": 3921,
+    "donations": 127,
+    "trophies": 3929,
     "defenseWins": 1,
-    "attackWins": 3
+    "attackWins": 4
   },
   "#29JJCJYJ0": {
     "nameCoc": "moha",
     "tagCoc": "#29JJCJYJ0",
-    "donations": 2300,
-    "trophies": 3799,
+    "donations": 2444,
+    "trophies": 3791,
     "defenseWins": 5,
     "attackWins": 14
   },
   "#2GUJ8QYL9": {
     "nameCoc": "seb2",
     "tagCoc": "#2GUJ8QYL9",
-    "donations": 234,
-    "trophies": 3668,
+    "donations": 242,
+    "trophies": 3673,
     "defenseWins": 0,
-    "attackWins": 25
+    "attackWins": 27
   },
   "#P2Q92LQJ": {
     "nameCoc": "globulus",
     "tagCoc": "#P2Q92LQJ",
-    "donations": 188,
-    "trophies": 3582,
+    "donations": 218,
+    "trophies": 3569,
     "defenseWins": 1,
-    "attackWins": 0
+    "attackWins": 1
   },
   "#LQP2YR2QJ": {
     "nameCoc": "mini massure",
     "tagCoc": "#LQP2YR2QJ",
     "donations": 139,
-    "trophies": 3531,
+    "trophies": 3554,
     "defenseWins": 2,
-    "attackWins": 4
+    "attackWins": 6
   },
   "#L92Q02UQ8": {
     "nameCoc": "⭐⭐SAVAŞÇI ⭐⭐",
     "tagCoc": "#L92Q02UQ8",
-    "donations": 211,
-    "trophies": 3297,
+    "donations": 249,
+    "trophies": 3329,
     "defenseWins": 3,
-    "attackWins": 12
+    "attackWins": 14
   },
   "#9LCPL9Q9U": {
     "nameCoc": "gojira",
     "tagCoc": "#9LCPL9Q9U",
-    "donations": 84,
-    "trophies": 3262,
+    "donations": 156,
+    "trophies": 3283,
     "defenseWins": 0,
-    "attackWins": 0
+    "attackWins": 1
   },
   "#CYYVLCQ8": {
     "nameCoc": "⭐️Mini⭐️King⭐️",
@@ -490,42 +517,51 @@
   "#28Q8CY8C": {
     "nameCoc": "pez84",
     "tagCoc": "#28Q8CY8C",
-    "donations": 86,
-    "trophies": 3204,
+    "donations": 165,
+    "trophies": 3205,
     "defenseWins": 0,
-    "attackWins": 12
+    "attackWins": 13
   },
   "#200V98YY2": {
     "nameCoc": "ArrowDown",
     "tagCoc": "#200V98YY2",
-    "donations": 616,
-    "trophies": 3202,
+    "donations": 661,
+    "trophies": 3218,
     "defenseWins": 1,
-    "attackWins": 3
+    "attackWins": 4
   },
   "#QPJ0RUVGG": {
     "nameCoc": "buch",
     "tagCoc": "#QPJ0RUVGG",
-    "donations": 186,
-    "trophies": 3210,
+    "donations": 282,
+    "trophies": 3202,
     "defenseWins": 0,
     "attackWins": 16
   },
   "#8G9CCJYL": {
     "nameCoc": "Gourou ⚔️",
     "tagCoc": "#8G9CCJYL",
-    "donations": 611,
-    "trophies": 3117,
+    "donations": 810,
+    "trophies": 3162,
     "defenseWins": 2,
-    "attackWins": 24
+    "attackWins": 26,
+    "userDiscord": {
+      "id": "796650034845843466",
+      "bot": false,
+      "system": false,
+      "flags": 0,
+      "username": "RouGourou",
+      "discriminator": "5745",
+      "avatar": "8c901d618b26fd1df5174881a6629709"
+    }
   },
   "#QCC82Q2Q": {
     "nameCoc": "waner",
     "tagCoc": "#QCC82Q2Q",
-    "donations": 86,
-    "trophies": 3096,
+    "donations": 265,
+    "trophies": 3101,
     "defenseWins": 1,
-    "attackWins": 16
+    "attackWins": 17
   },
   "#RJRU8R2": {
     "nameCoc": "CyanoGeek",
@@ -539,9 +575,9 @@
     "nameCoc": "benbech",
     "tagCoc": "#2G8L82QPU",
     "donations": 40,
-    "trophies": 3027,
+    "trophies": 3020,
     "defenseWins": 1,
-    "attackWins": 10
+    "attackWins": 11
   },
   "#8UPUQG9YY": {
     "nameCoc": "Xb_ClAsH",
@@ -562,7 +598,7 @@
   "#LGVJUV2LQ": {
     "nameCoc": "dada",
     "tagCoc": "#LGVJUV2LQ",
-    "donations": 46,
+    "donations": 66,
     "trophies": 2891,
     "defenseWins": 0,
     "attackWins": 13
@@ -571,9 +607,9 @@
     "nameCoc": "variks",
     "tagCoc": "#PCYJ2JVQV",
     "donations": 70,
-    "trophies": 2884,
+    "trophies": 2916,
     "defenseWins": 1,
-    "attackWins": 1
+    "attackWins": 2
   },
   "#VLLRL2YV": {
     "nameCoc": "Zratyy",
@@ -586,32 +622,32 @@
   "#2L9LPGY9V": {
     "nameCoc": "laviddok",
     "tagCoc": "#2L9LPGY9V",
-    "donations": 128,
-    "trophies": 2794,
+    "donations": 201,
+    "trophies": 2781,
     "defenseWins": 0,
     "attackWins": 5
   },
   "#PLGRPCYG0": {
     "nameCoc": "S U N T A P",
     "tagCoc": "#PLGRPCYG0",
-    "donations": 220,
-    "trophies": 2675,
-    "defenseWins": 3,
-    "attackWins": 32
+    "donations": 250,
+    "trophies": 2654,
+    "defenseWins": 4,
+    "attackWins": 35
   },
   "#YY0QVGR0J": {
     "nameCoc": "Žóŕļáňđő",
     "tagCoc": "#YY0QVGR0J",
-    "donations": 239,
-    "trophies": 2610,
+    "donations": 249,
+    "trophies": 2629,
     "defenseWins": 0,
-    "attackWins": 14
+    "attackWins": 15
   },
   "#LYCR9UU80": {
     "nameCoc": "yvari",
     "tagCoc": "#LYCR9UU80",
     "donations": 0,
-    "trophies": 2579,
+    "trophies": 2558,
     "defenseWins": 0,
     "attackWins": 0
   },
@@ -619,7 +655,7 @@
     "nameCoc": "Seb@",
     "tagCoc": "#Q2VPYG2P2",
     "donations": 26,
-    "trophies": 2440,
+    "trophies": 2420,
     "defenseWins": 2,
     "attackWins": 23
   },
@@ -627,41 +663,42 @@
     "nameCoc": "bachalex",
     "tagCoc": "#28LU98GC",
     "donations": 12,
-    "trophies": 2356,
+    "trophies": 2388,
     "defenseWins": 0,
-    "attackWins": 17
+    "attackWins": 19
   },
   "#JLGP2QYP": {
     "nameCoc": "MOMO",
     "tagCoc": "#JLGP2QYP",
     "donations": 0,
-    "trophies": 2339,
+    "trophies": 2329,
     "defenseWins": 3,
     "attackWins": 4
   },
   "#2JVYQRUG2": {
     "nameCoc": "Phil le belge 2",
     "tagCoc": "#2JVYQRUG2",
-    "donations": 0,
-    "trophies": 2234,
+    "donations": 58,
+    "trophies": 2225,
     "defenseWins": 0,
-    "attackWins": 0
+    "attackWins": 0,
+    "userDiscord": {}
   },
   "#QQPRU2Q2": {
     "nameCoc": "Yoda",
     "tagCoc": "#QQPRU2Q2",
-    "donations": 576,
-    "trophies": 2203,
-    "defenseWins": 1,
-    "attackWins": 2
+    "donations": 732,
+    "trophies": 2269,
+    "defenseWins": 3,
+    "attackWins": 4
   },
   "#2RCGLUCCV": {
     "nameCoc": "**Marti**",
     "tagCoc": "#2RCGLUCCV",
     "donations": 90,
-    "trophies": 2132,
+    "trophies": 2133,
     "defenseWins": 1,
-    "attackWins": 3
+    "attackWins": 4
   },
   "#20VV0R8JP": {
     "nameCoc": "thierrus",
@@ -683,7 +720,7 @@
     "nameCoc": "yoangerrier",
     "tagCoc": "#9UQ882QGP",
     "donations": 0,
-    "trophies": 2072,
+    "trophies": 2064,
     "defenseWins": 0,
     "attackWins": 3
   },
@@ -698,7 +735,7 @@
   "#QQGJR9JCL": {
     "nameCoc": "dav",
     "tagCoc": "#QQGJR9JCL",
-    "donations": 44,
+    "donations": 56,
     "trophies": 1977,
     "defenseWins": 4,
     "attackWins": 1
@@ -707,23 +744,23 @@
     "nameCoc": "Phil le belge 3",
     "tagCoc": "#L0LR0J82C",
     "donations": 0,
-    "trophies": 1966,
-    "defenseWins": 1,
+    "trophies": 1989,
+    "defenseWins": 2,
     "attackWins": 0
   },
   "#L98CR2QVQ": {
     "nameCoc": "noob master",
     "tagCoc": "#L98CR2QVQ",
-    "donations": 122,
-    "trophies": 1958,
+    "donations": 157,
+    "trophies": 1945,
     "defenseWins": 2,
-    "attackWins": 4
+    "attackWins": 5
   },
   "#228QCUCPG": {
     "nameCoc": "Demiix",
     "tagCoc": "#228QCUCPG",
     "donations": 0,
-    "trophies": 1817,
+    "trophies": 1812,
     "defenseWins": 4,
     "attackWins": 25
   },
@@ -731,8 +768,8 @@
     "nameCoc": "Benitô",
     "tagCoc": "#LQV0PJ2Y0",
     "donations": 40,
-    "trophies": 1765,
-    "defenseWins": 0,
+    "trophies": 1784,
+    "defenseWins": 1,
     "attackWins": 2
   },
   "#PGUPP9LUY": {
@@ -755,7 +792,7 @@
     "nameCoc": "RICARD",
     "tagCoc": "#U8QRR99L",
     "donations": 134,
-    "trophies": 1648,
+    "trophies": 1627,
     "defenseWins": 11,
     "attackWins": 0
   },
@@ -763,8 +800,8 @@
     "nameCoc": "heisenberg",
     "tagCoc": "#GUJLY99Q",
     "donations": 265,
-    "trophies": 1503,
-    "defenseWins": 10,
+    "trophies": 1525,
+    "defenseWins": 11,
     "attackWins": 27
   },
   "#YGRLR2P92": {
@@ -778,10 +815,10 @@
   "#QGGQU9LQR": {
     "nameCoc": "Manoo",
     "tagCoc": "#QGGQU9LQR",
-    "donations": 121,
-    "trophies": 876,
+    "donations": 123,
+    "trophies": 893,
     "defenseWins": 2,
-    "attackWins": 0
+    "attackWins": 1
   },
   "#29VJ8CC2Q": {
     "nameCoc": "★彡[MAXENCE]彡★",
@@ -864,7 +901,7 @@
     "attackWins": 17
   },
   "timeStamp": {
-    "day": 3,
+    "day": 4,
     "month": 3,
     "year": 2022
   }
