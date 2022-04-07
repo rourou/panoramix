@@ -70,9 +70,9 @@ const goodMorning = async (client) => {
         //ajout des attaques
         if (podiums.attackWins[0].name && podiums.attackWins[1].name && podiums.attackWins[2].name) {
             const stringAtk = [
-                `1- ${podiums.attackWins[0].name} avec ${podiums.attackWins[0].diff} attaques gagnés`,
-                `2- ${podiums.attackWins[1].name} avec ${podiums.attackWins[1].diff} attaques gagnés`,
-                `3- ${podiums.attackWins[2].name} avec ${podiums.attackWins[2].diff} attaques gagnés`
+                `1- ${podiums.attackWins[0].name} avec ${podiums.attackWins[0].diff} attaques gagnées`,
+                `2- ${podiums.attackWins[1].name} avec ${podiums.attackWins[1].diff} attaques gagnées`,
+                `3- ${podiums.attackWins[2].name} avec ${podiums.attackWins[2].diff} attaques gagnées`
             ]
             embed.addFields(
                 { name: `Bravo aux meilleurs attaquants`, value: stringAtk.join("\n") }
@@ -81,9 +81,9 @@ const goodMorning = async (client) => {
         //ajout des défenses
         if (podiums.defenseWins[0].name && podiums.defenseWins[1].name && podiums.defenseWins[2].name) {
             const stringDef = [
-                `1- ${podiums.defenseWins[0].name} avec ${podiums.defenseWins[0].diff} attaques gagnés`,
-                `2- ${podiums.defenseWins[1].name} avec ${podiums.defenseWins[1].diff} attaques gagnés`,
-                `3- ${podiums.defenseWins[2].name} avec ${podiums.defenseWins[2].diff} attaques gagnés`
+                `1- ${podiums.defenseWins[0].name} avec ${podiums.defenseWins[0].diff} défenses gagnées`,
+                `2- ${podiums.defenseWins[1].name} avec ${podiums.defenseWins[1].diff} défenses gagnées`,
+                `3- ${podiums.defenseWins[2].name} avec ${podiums.defenseWins[2].diff} défenses gagnées`
             ]
             embed.addFields(
                 { name: `Bravo aux meilleurs défenseurs`, value: stringDef.join("\n") }
@@ -94,6 +94,7 @@ const goodMorning = async (client) => {
             { name: `---`, value: `😃 Je vous souhaite une excellente journée` }
         )
 
+        console.log('embed:', embed)
         //envoi du message
         channel.send({ ephemeral: false, embeds: [embed] })
 
@@ -133,7 +134,7 @@ const podium = async (variable) => {
                 try {
                     yesterday = membersCocYesterday[member][variable]
                 } catch (error) {
-                    yesterday = 0
+                    yesterday = actual
                 }
                 //si yesterday est supérieur a aujourd'hui (début de ligue) -> yesterday a 0 mise de coté des trophés ou l'on peut descendre
                 if (yesterday > actual && variable !== "trophies") {
