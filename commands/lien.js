@@ -166,13 +166,13 @@ module.exports = {
                 const stringLink = tabLink.join('\n')
                 for (let i = 0; i < stringLink.length; i += 1024) {
                     const cont = stringLink.substring(i, Math.min(stringLink.length, i + 1024));
-                    embedList.addField(" ", cont);
+                    embedList.addField(`\u200B`, cont);
                 }
                 //pour les no links
                 const stringNoLink = tabNoLink.join('\n')
                 for (let i = 0; i < stringNoLink.length; i += 1024) {
                     const cont = stringNoLink.substring(i, Math.min(stringNoLink.length, i + 1024));
-                    embedList.addField(" ", cont);
+                    embedList.addField(`\u200B`, cont);
                 }
 
                 await interaction.editReply({ ephemeral: true, embeds: [embedList] });
