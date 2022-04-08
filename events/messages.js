@@ -25,32 +25,6 @@ module.exports = {
         //verif si on appel panoramix
         if (message.content.toLowerCase() === 'panoramix') {
             console.log("appel panoramix")
-
-            //mise en pause de la reponse
-            await message.deferReply({ ephemeral: true });
-
-            const embed = new MessageEmbed()
-                .setColor('#ffffff')
-                .addFields(
-                    { name: `Salut`, value: `${message.author.toString()}!` },
-                )
-
-            await message.editReply({
-                ephemeral: true, embeds: [embed]
-            })/*, fetchReply: true
-            })
-                .then(() => {
-                    message.channel.awaitMessages({ max: 1, time: 30000, errors: ['time'] })
-                        .then(collected => {
-                            console.log('collected:', collected)
-                            message.channel.send(`${collected.content} got the correct answer!`);
-                        })
-                        .catch(collected => {
-                            console.log('collected:', collected)
-                            message.channel.send('Looks like nobody got the answer this time.');
-                        });
-                });*/
-
         }
 
         //verification si tag (contient # et n'as qu'un seul mot)
