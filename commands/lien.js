@@ -54,6 +54,7 @@ module.exports = {
                 })
                 //recherche sur COC
                 infosMember = await clash.getPlayer(tag).then((res) => {
+                    console.log('res:', res)
                     if (res.error) {
                         return false
                     }
