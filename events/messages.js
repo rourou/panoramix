@@ -32,19 +32,23 @@ module.exports = {
                     { name: `Salut`, value: `${message.author.toString()}!` },
                 )
 
-            message.reply({ ephemeral: false, embeds: [embed], fetchReply: true })
+            message.reply({
+                ephemeral: true, embeds: [embed], fetchReply: true
+            })
                 .then(() => {
                     message.channel.awaitMessages({ max: 1, time: 30000, errors: ['time'] })
                         .then(collected => {
                             console.log('collected:', collected)
-                            message.channel.send(`${collected} got the correct answer!`);
+                            message.channel.send(`${collected.content} got the correct answer!`);
                         })
                         .catch(collected => {
                             console.log('collected:', collected)
                             message.channel.send('Looks like nobody got the answer this time.');
                         });
                 });
+
         }
+
         //verification si tag (contient # et n'as qu'un seul mot)
         if (message.content.includes('#') && message.content.split(' ').length === 1) {
             console.log("commande #")
