@@ -14,7 +14,7 @@ module.exports = {
         //mise en pause de la reponse
         await interaction.deferReply({ ephemeral: true });
 
-        const replyObj = await constructReplyTab()
+        const replyObj = await constructReply()
 
         const embed = new MessageEmbed()
             .setColor('#ffffff')
@@ -30,7 +30,7 @@ module.exports = {
     },
 };
 
-const constructReplyTab = async () => {
+const constructReply = async () => {
     //objet de recherche
     const allMembers = await db.getFullDb("dayZero")
     let replyObjet = {}
@@ -42,6 +42,8 @@ const constructReplyTab = async () => {
 
                     const troupName = allMembers[member].coc.troops[troup].name
                     const memberName = allMembers[member].coc.name
+                    const memberTag = allMembers[member].coc.tag
+                    const memberClan = allMembers[member].coc.clan.name
 
                     let temp
                     try {
@@ -49,7 +51,7 @@ const constructReplyTab = async () => {
                     } catch (error) {
                         temp = []
                     }
-                    temp.push(memberName)
+                    temp.push(`${memberName} (${memberTag}) - ${memberClan}`)
 
                     replyObjet = {
                         ...replyObjet,

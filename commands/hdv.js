@@ -20,35 +20,52 @@ module.exports = {
         //mise en pause de la reponse
         await interaction.deferReply({ ephemeral: true });
 
-        const replyTab = await constructReplyTab(hdv)
+        const replyObj = await constructReply(hdv)
 
         const embed = new MessageEmbed()
             .setColor('#ffffff')
-            .addFields(
-                { name: `HDV ${hdv}`, value: replyTab.join("\n") }
-            )
+            .setTitle(`Villages HDV ${hdv}`)
 
-        // await interaction.editReply(replyTab.join("\n"));
+        for (const item in replyObj) {
+            embed.addFields(
+                { name: item, value: replyObj[item].join("\n") }
+            )
+        }
+
         await interaction.editReply({ ephemeral: false, embeds: [embed] })
     },
 };
 
-const constructReplyTab = async (hdv) => {
+const constructReply = async (hdv) => {
     //objet de recherche
     const clanFamilly = await db.getFullDb("clans")
     //recherche via l'api COC
-    let replyTab = []
+    let replyObjet = {}
     for (const clanSearch in clanFamilly) {
         if (clanSearch !== "timeStamp") {
-            replyTab.push(`------ ${clanFamilly[`${clanSearch}`].infosCoc.name} ------`)
             for (const member of clanFamilly[`${clanSearch}`].infosCoc.memberList) {
                 const infosMember = await db.getUser({ db: "dayZero", tag: member.tag })
                 if (infosMember.coc.townHallLevel === hdv) {
-                    replyTab.push(`${member.name} (${member.tag})`)
+
+                    const clanName = clanFamilly[`${clanSearch}`].infosCoc.name
+                    const memberName = infosMember.coc.name
+                    const memberTag = infosMember.coc.tag
+
+                    let temp
+                    try {
+                        temp = [...replyObjet[clanName]]
+                    } catch (error) {
+                        temp = []
+                    }
+                    temp.push(`${memberName} (${memberTag})`)
+                    replyObjet = {
+                        ...replyObjet,
+                        [clanName]: temp
+                    }
                 }
             }
-            replyTab.push(`------------------------`)
         }
     }
-    return replyTab
+    console.log('replyObjet:', replyObjet)
+    return replyObjet
 }
