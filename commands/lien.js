@@ -53,7 +53,12 @@ module.exports = {
                     tag: `#${tag}`,
                 })
                 //recherche sur COC
-                clash.getPlayer(tag).then(() => {
+                infosMember = await clash.getPlayer(tag).then((res) => {
+                    return res.data
+                }).catch(() => {
+                    return false
+                })
+                if (infosMember) {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
@@ -65,7 +70,7 @@ module.exports = {
                     if (add === "OK") {
                         reponse = {
                             title: `Merci ${interaction.user.username}`,
-                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.data.name} - ${tag}`
+                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.name} - ${tag}`
                         }
                     } else {
                         reponse = {
@@ -73,12 +78,12 @@ module.exports = {
                             value: "Je n'ai pas réussi t'enregistrer"
                         }
                     }
-                }).catch(() => {
+                } else {
                     reponse = {
                         title: "ERREUR",
                         value: "Je ne trouve pas ce tag dans le jeux"
                     }
-                })
+                }
 
                 break;
 
