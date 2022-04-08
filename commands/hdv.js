@@ -21,7 +21,7 @@ module.exports = {
         //mise en pause de la reponse
         await interaction.deferReply({ ephemeral: true });
 
-        const replyTab = await constructReplyTab(hdv)
+        const replyTab = await constructReplyTab(parseInt(hdv))
 
         const embed = new MessageEmbed()
             .setColor('#ffffff')
