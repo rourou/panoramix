@@ -16,7 +16,6 @@ module.exports = {
                 .setDescription('Action')
                 .addChoice('Ajout', 'add')
                 .addChoice('Suppression', 'suppr')
-                .addChoice('Liste', 'list')
                 .addChoice('Demande', 'demande')
                 .setRequired(true)
         )
@@ -25,7 +24,11 @@ module.exports = {
                 .setDescription('Tag du joueur')
                 .setRequired(true)
         )
-    ,
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('liste')
+                .setDescription('Affichage des liens présents et manquants')
+        ),
 
     async execute(interaction) {
         console.log('interaction:', interaction)
