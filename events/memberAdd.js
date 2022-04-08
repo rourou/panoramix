@@ -1,6 +1,6 @@
 const { MessageActionRow, MessageSelectMenu, MessageButton, MessageEmbed } = require('discord.js');
 const { bold, italic, strikethrough, underscore, spoiler, quote, blockQuote } = require('@discordjs/builders');
-const { channelStart } = require('../datas/config.json');
+const { channelStart } = require('../datas/configBot.json');
 
 module.exports = {
     name: 'guildMemberAdd',

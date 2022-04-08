@@ -30,7 +30,7 @@ module.exports = {
         tag = tag.replaceAll('#', '').toUpperCase()
 
         //mise en pause de la reponse
-        await interaction.deferReply();
+        await interaction.deferReply({ ephemeral: true });
 
         let res = null
         let reply = {

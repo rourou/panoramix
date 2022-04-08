@@ -7,7 +7,7 @@ const getFeteDuJour = async (date) => {
     const infoClan = await Axios.get(
         url,
     ).then((result) => {
-        console.log('result:', result.data)
+        //console.log('result:', result.data)
         return ({
             data: result.data,
             statusCode: 200

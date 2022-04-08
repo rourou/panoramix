@@ -21,7 +21,8 @@
     "moment": "^2.29.1",
     "node": "^17.7.2",
     "node-cron": "^3.0.0",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "stormdb": "^0.5.2"
   },
   "description": ""
 }

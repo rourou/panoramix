@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const { bold, italic, strikethrough, underscore, spoiler, quote, blockQuote } = require('@discordjs/builders');
 //json de config
-const { channelEnd } = require('../datas/config.json');
+const { channelEnd } = require('../datas/configBot.json');
 
 module.exports = {
     name: 'guildMemberRemove',

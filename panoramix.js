@@ -3,7 +3,7 @@ const fs = require('node:fs');
 // On importe les classes nécessaire au bon fonctionnement du bot
 const { Client, Collection, Intents } = require('discord.js');
 //json de config
-const { token } = require('./datas/config.json');
+const { token } = require('./datas/configBot.json');
 // On instancie le client Discord
 const client = new Client({
     intents: [

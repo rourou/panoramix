@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageSelectMenu, MessageButton, MessageEmbed } = require('discord.js');
 //json de config
-const { channelFlood } = require('../datas/config.json');
+const { channelFlood } = require('../datas/configBot.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
