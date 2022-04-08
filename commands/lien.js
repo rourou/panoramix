@@ -23,7 +23,7 @@ module.exports = {
         .addStringOption(option =>
             option.setName('tag')
                 .setDescription('Tag du joueur')
-                .setRequired(false)
+                .setRequired(true)
         )
     ,
 
@@ -40,7 +40,7 @@ module.exports = {
         switch (action) {
 
             /*####################################################################################################################*/
-            case add:
+            case "add":
 
                 //recherche en bdd
                 const getUser = await db.getUser({
