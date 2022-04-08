@@ -53,7 +53,7 @@ module.exports = {
                     tag: `#${tag}`,
                 })
                 //recherche sur COC
-                infosMember = await clash.getPlayer(tag).then(() => {
+                clash.getPlayer(tag).then(() => {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
