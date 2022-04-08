@@ -37,7 +37,7 @@ const constructReplyTab = async (hdv) => {
     //objet de recherche
     const clanFamilly = await db.getFullDb("clans")
     //recherche via l'api COC
-    const replyTab = []
+    let replyTab = []
     for (const clanSearch in clanFamilly) {
         if (clanSearch !== "timeStamp") {
             infosClan = await clash.getClan(clanSearch.replaceAll('#', '').toUpperCase())
