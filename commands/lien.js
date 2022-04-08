@@ -37,6 +37,8 @@ module.exports = {
         }
 
         let action = interaction.options.get("action").value
+        let tag = interaction.options.get("tag").value().replaceAll('#', '').toUpperCase()
+        console.log('tag:', tag)
         let getUser
         let infosMember
 
@@ -48,14 +50,14 @@ module.exports = {
                 //recherche en bdd
                 getUser = await db.getUser({
                     db: "dayZero",
-                    tag: member.tag,
+                    tag: `#${tag}`,
                 })
                 //recherche sur COC
-                infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
+                infosMember = await clash.getPlayer(tag)
                 if (infosMember.data) {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
-                        tag: member.tag,
+                        tag: `#${tag}`,
                         data: {
                             coc: getUser ? getUser.coc : null,
                             discord: interaction.user
@@ -94,7 +96,7 @@ module.exports = {
                 if (infosMember.data) {
                     const suppr = await db.addUpdateUser({
                         db: "dayZero",
-                        tag: member.tag,
+                        tag: tag,
                         data: {
                             coc: getUser ? getUser.coc : null,
                             discord: interaction.user
