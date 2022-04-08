@@ -53,8 +53,7 @@ module.exports = {
                     tag: `#${tag}`,
                 })
                 //recherche sur COC
-                infosMember = await clash.getPlayer(tag)
-                if (!!infosMember.data) {
+                infosMember = await clash.getPlayer(tag).then(() => {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
@@ -74,12 +73,12 @@ module.exports = {
                             value: "Je n'ai pas réussi t'enregistrer"
                         }
                     }
-                } else {
+                }).catch(() => {
                     reponse = {
                         title: "ERREUR",
                         value: "Je ne trouve pas ce tag dans le jeux"
                     }
-                }
+                })
 
                 break;
 
