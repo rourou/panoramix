@@ -67,7 +67,7 @@ module.exports = {
                 infosMember = await clash.getPlayer(tag)
 
                 if (infosMember.data !== "N/A") {
-                    console.log('interaction.user:', interaction.user)
+                    console.log('interaction.user:', interaction.user.username)
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
