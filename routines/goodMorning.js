@@ -15,9 +15,9 @@ const goodMorning = async (client) => {
 
     try {
 
-        // const channel = await client.channels.fetch(channelFlood) //id du flood
-        //     .then((channel) => { return channel })
-        //     .catch((err) => { return null })
+        const channel = await client.channels.fetch(channelFlood) //id du flood
+            .then((channel) => { return channel })
+            .catch((err) => { return null })
 
         //recup de la date du jour
         const jsonDate = {
@@ -102,8 +102,8 @@ const goodMorning = async (client) => {
         )
 
         //envoi du message
-        console.log('embed:', embed)
-        //channel.send({ ephemeral: false, embeds: [embed] })
+        //console.log('embed:', embed)
+        channel.send({ ephemeral: false, embeds: [embed] })
 
         //sauvegarde du json de la veille pour comparaison demain si pas le meme jour que aujourdui sur le timestamp
         //date dans le yesterday
@@ -204,4 +204,3 @@ const roulementDbs = async () => {
 module.exports = {
     goodMorning: goodMorning
 }
-goodMorning()
