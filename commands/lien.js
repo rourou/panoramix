@@ -92,6 +92,7 @@ module.exports = {
                     db: "dayZero",
                     tag: `#${tag}`,
                 })
+                console.log('getUser:', getUser)
                 if (getUser) {
                     const suppr = await db.addUpdateUser({
                         db: "dayZero",
@@ -115,7 +116,7 @@ module.exports = {
                 } else {
                     reponse = {
                         title: "ERREUR",
-                        value: "Je ne trouve pas ce tag dans le jeux"
+                        value: "Je ne trouve pas ce tag"
                     }
                 }
 
