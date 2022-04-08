@@ -89,23 +89,23 @@ module.exports = {
                 //recherche en bdd
                 getUser = await db.getUser({
                     db: "dayZero",
-                    tag: member.tag,
+                    tag: `#${tag}`,
                 })
                 //recherche sur COC
                 infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
                 if (infosMember.data) {
                     const suppr = await db.addUpdateUser({
                         db: "dayZero",
-                        tag: tag,
+                        tag: `#${tag}`,
                         data: {
                             coc: getUser ? getUser.coc : null,
-                            discord: interaction.user
+                            discord: null
                         }
                     })
                     if (suppr === "OK") {
                         reponse = {
                             title: `Merci ${interaction.user.username}`,
-                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.data.name} - ${member.tag}`
+                            value: `Tu n'est plus le chef du village: ${infosMember.data.name} - ${tag}`
                         }
                     } else {
                         reponse = {
