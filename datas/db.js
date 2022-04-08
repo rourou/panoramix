@@ -6,7 +6,6 @@ const getFullDb = async (db) => {
 }
 //ajout user sur une table
 const addUpdateUser = async (data) => {
-    console.log('data:', data)
     if (!data.db.includes("day")) { return }
     if (!data.tag) { return }
     await dbStore[`${data.db}`].get(data.tag).set(data.data ? data.data : null)

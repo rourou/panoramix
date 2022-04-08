@@ -67,7 +67,6 @@ module.exports = {
                 infosMember = await clash.getPlayer(tag)
 
                 if (infosMember.data !== "N/A") {
-                    console.log('interaction.user:', interaction.user.username)
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
@@ -136,9 +135,23 @@ module.exports = {
 
             /*####################################################################################################################*/
             case "list":
+                //tableaux de res
+                let tabLink = ['Membres avec liens']
+                let tabNoLink = ['Membres sans liens']
                 //all members 
                 const allMembers = await db.getFullDb("dayZero")
-                console.log('allMembers:', allMembers)
+                for (const member in allMembers) {
+                    console.log('member:', member)
+                    if (allMembers[member].discord === null) {
+                        tabNoLink.push(`${allMembers[member].coc.name} (${member})`)
+                    } else {
+                        tabLink.push(`${allMembers[member].coc.name} (${member}) --> ${allMembers[member].discord.username}`)
+                    }
+                }
+                reponse = {
+                    title: "LIENS",
+                    value: `${tabLink.join('\n')}\n${tabNoLink.join('\n')}`
+                }
                 break
 
             /*####################################################################################################################*/
