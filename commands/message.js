@@ -22,6 +22,9 @@ module.exports = {
 
     async execute(interaction) {
 
+        //mise en pause de la reponse
+        await interaction.deferReply({ ephemeral: true });
+
         let channelToSend
         let message = interaction.options.get("texte").value
 
@@ -50,5 +53,25 @@ module.exports = {
 
         //envoi du message
         channel.send({ ephemeral: false, embeds: [embed] })
+            .then(() => {
+                const embedSuccess = new MessageEmbed()
+                    .setColor('#ffffff')
+                    .addFields(
+                        { name: `---`, value: "c'est fait" }
+                    )
+
+                await interaction.editReply({ ephemeral: true, embeds: [embedSuccess] })
+            })
+            .catch(() => {
+                const embedError = new MessageEmbed()
+                    .setColor('#ffffff')
+                    .addFields(
+                        { name: `---`, value: "une erreur est survenue" }
+                    )
+
+                await interaction.editReply({ ephemeral: true, embeds: [embedError] })
+            })
+
+
     },
 };

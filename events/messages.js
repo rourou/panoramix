@@ -31,10 +31,6 @@ module.exports = {
         if (message.content.includes('#') && message.content.split(' ').length === 1) {
             console.log("commande #")
         }
-
-
-
-
     },
 };
 
