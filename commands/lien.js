@@ -16,19 +16,16 @@ module.exports = {
                 .setDescription('Action')
                 .addChoice('Ajout', 'add')
                 .addChoice('Suppression', 'suppr')
+                .addChoice('Liste', 'list')
                 .addChoice('Demande', 'demande')
                 .setRequired(true)
         )
         .addStringOption(option =>
             option.setName('tag')
                 .setDescription('Tag du joueur')
-                .setRequired(true)
+                .setRequired(false)
         )
-        .addSubcommand(subcommand =>
-            subcommand
-                .setName('liste')
-                .setDescription('Affichage des liens présents et manquants')
-        ),
+    ,
 
     async execute(interaction) {
         console.log('interaction:', interaction)
@@ -45,7 +42,18 @@ module.exports = {
         let getUser
         let infosMember
 
+        if (!tag) {
+            action = "tag-manquant"
+        }
+
         switch (action) {
+
+            case "tag-manquant":
+                reponse = {
+                    title: "Tag manquant",
+                    value: "Il faut renseigner un tag pour cette commande"
+                }
+                break;
 
             /*####################################################################################################################*/
             case "add":
