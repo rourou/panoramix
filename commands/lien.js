@@ -54,7 +54,7 @@ module.exports = {
                 })
                 //recherche sur COC
                 infosMember = await clash.getPlayer(tag)
-                if (infosMember.data) {
+                if (!!infosMember.data) {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
