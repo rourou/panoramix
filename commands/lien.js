@@ -37,18 +37,21 @@ module.exports = {
         }
 
         let action = interaction.options.get("action").value
+        let getUser
+        let infosMember
+
         switch (action) {
 
             /*####################################################################################################################*/
             case "add":
 
                 //recherche en bdd
-                const getUser = await db.getUser({
+                getUser = await db.getUser({
                     db: "dayZero",
                     tag: member.tag,
                 })
                 //recherche sur COC
-                const infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
+                infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
                 if (infosMember.data) {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
@@ -77,6 +80,46 @@ module.exports = {
                 }
 
                 break;
+
+            /*####################################################################################################################*/
+            case "suppr":
+
+                //recherche en bdd
+                getUser = await db.getUser({
+                    db: "dayZero",
+                    tag: member.tag,
+                })
+                //recherche sur COC
+                infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
+                if (infosMember.data) {
+                    const suppr = await db.addUpdateUser({
+                        db: "dayZero",
+                        tag: member.tag,
+                        data: {
+                            coc: getUser ? getUser.coc : null,
+                            discord: interaction.user
+                        }
+                    })
+                    if (suppr === "OK") {
+                        reponse = {
+                            title: `Merci ${interaction.user.username}`,
+                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.data.name} - ${member.tag}`
+                        }
+                    } else {
+                        reponse = {
+                            title: "ERREUR",
+                            value: "Je n'ai pas réussi t'enregistrer"
+                        }
+                    }
+                } else {
+                    reponse = {
+                        title: "ERREUR",
+                        value: "Je ne trouve pas ce tag dans le jeux"
+                    }
+                }
+
+                break;
+
 
             /*####################################################################################################################*/
             default:
