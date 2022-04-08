@@ -32,7 +32,7 @@ module.exports = {
                     { name: `Salut`, value: `${message.author.toString()}!` },
                 )
 
-            await message.reply({
+            await message.channel.send({
                 ephemeral: true, embeds: [embed]
             })/*, fetchReply: true
             })
