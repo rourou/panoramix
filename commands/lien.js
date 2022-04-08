@@ -37,7 +37,7 @@ module.exports = {
         }
 
         let action = interaction.options.get("action").value
-        let tag = interaction.options.get("tag").value().replaceAll('#', '').toUpperCase()
+        let tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
         console.log('tag:', tag)
         let getUser
         let infosMember
