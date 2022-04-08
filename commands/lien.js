@@ -28,7 +28,7 @@ module.exports = {
     ,
 
     async execute(interaction) {
-        console.log('interaction:', interaction)
+        //console.log('interaction:', interaction)
 
         await interaction.deferReply({ ephemeral: true });
         let reponse = {
