@@ -16,6 +16,7 @@ module.exports = {
     async execute(interaction) {
 
         let hdv = interaction.options.get("hdv").value
+        console.log('hdv:', hdv)
 
         //mise en pause de la reponse
         await interaction.deferReply({ ephemeral: true });
