@@ -33,7 +33,8 @@ module.exports = {
                 )
 
             message.reply({
-                ephemeral: true, embeds: [embed], fetchReply: true
+                ephemeral: true, embeds: [embed]
+            })/*, fetchReply: true
             })
                 .then(() => {
                     message.channel.awaitMessages({ max: 1, time: 30000, errors: ['time'] })
@@ -45,7 +46,7 @@ module.exports = {
                             console.log('collected:', collected)
                             message.channel.send('Looks like nobody got the answer this time.');
                         });
-                });
+                });*/
 
         }
 
