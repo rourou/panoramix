@@ -137,7 +137,7 @@ module.exports = {
             /*####################################################################################################################*/
             case "list":
                 //tableaux de res
-                let tabLink = ['Membres avec liens']
+                let tabLink = []
                 let tabNoLink = ['Membres sans liens']
                 //all members 
                 const allMembers = await db.getFullDb("dayZero")
@@ -163,12 +163,14 @@ module.exports = {
                 //ajout des field de 1024 caractères
 
                 //pour les links
+                embedList.addField('Membres avec liens', `\u200B`)
                 const stringLink = tabLink.join('\n')
                 for (let i = 0; i < stringLink.length; i += 1024) {
                     const cont = stringLink.substring(i, Math.min(stringLink.length, i + 1024));
                     embedList.addField(`\u200B`, cont);
                 }
                 //pour les no links
+                embedList.addField('Membres sans liens', `\u200B`)
                 const stringNoLink = tabNoLink.join('\n')
                 for (let i = 0; i < stringNoLink.length; i += 1024) {
                     const cont = stringNoLink.substring(i, Math.min(stringNoLink.length, i + 1024));
