@@ -149,9 +149,7 @@ module.exports = {
                             } else {
                                 tabLink.push(`${allMembers[member].coc.name} (${member}) --> ${allMembers[member].discord.username}`)
                             }
-                        } catch {
-
-                        }
+                        } catch { }
                     }
                 }
 
