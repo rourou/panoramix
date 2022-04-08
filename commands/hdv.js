@@ -40,11 +40,10 @@ const constructReplyTab = async (hdv) => {
     let replyTab = []
     for (const clanSearch in clanFamilly) {
         if (clanSearch !== "timeStamp") {
-            infosClan = await clash.getClan(clanSearch.replaceAll('#', '').toUpperCase())
             replyTab.push(`------ ${clanFamilly[`${clanSearch}`].infosCoc.name} ------`)
-            for (const member of infosClan.data.memberList) {
-                infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
-                if (infosMember.data.townHallLevel === hdv) {
+            for (const member of clanFamilly[`${clanSearch}`].infosCoc.memberList) {
+                const infosMember = await db.getUser({ db: "dayZero", tag: member.tag })
+                if (infosMember.coc.townHallLevel === hdv) {
                     replyTab.push(`${member.name} (${member.tag})`)
                 }
             }

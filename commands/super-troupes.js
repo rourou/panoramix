@@ -19,9 +19,6 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('#ffffff')
             .setTitle(`Super Troupes actives`)
-            .addFields(
-                { name: `Super Troupes`, value: replyTab.join("\n") }
-            )
 
         for (const item in replyObj) {
             embed.addFields(
@@ -39,7 +36,7 @@ const constructReplyTab = async () => {
     let replyObjet = {}
     for (const member in allMembers) {
         if (member !== "timeStamp") {
-            console.log('allMembers[member]:', allMembers[member])
+            //console.log('[member]', member)
             for (const troup in allMembers[member].coc.troops) {
                 if (allMembers[member].coc.troops[troup].superTroopIsActive) {
 
