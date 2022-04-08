@@ -1,5 +1,6 @@
 const cron = require('node-cron');
-const { goodMorning } = require('../routines/goodMorning');
+const goodMorning = require('../routines/goodMorning');
+const sunday = require('../routines/sunday');
 const hourly = require('../routines/hourly');
 
 /*
@@ -28,7 +29,13 @@ function start(client) {
     //Bonjour du matin
     cron.schedule('00 08 * * *', function () {
         console.log('cron --> Good morning');
-        goodMorning(client)
+        goodMorning.run(client)
+    });
+
+    //Message du dimanche Soir
+    cron.schedule('00 20 * * sunday', function () {
+        console.log('cron --> Message du Dimanche');
+        sunday.run(client)
     });
 }
 

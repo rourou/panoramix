@@ -10,7 +10,7 @@ moment.locale('fr')
 //BDD
 const db = require("../datas/db");
 
-const goodMorning = async (client) => {
+const run = async (client) => {
     console.log("Lancement du good Morning");
 
     try {
@@ -202,5 +202,5 @@ const roulementDbs = async () => {
     }
 }
 module.exports = {
-    goodMorning: goodMorning
+    run: run
 }
