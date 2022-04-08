@@ -37,13 +37,13 @@ module.exports = {
         }
 
         let action = interaction.options.get("action").value
-        let tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
-        console.log('tag:', tag)
-        let getUser
-        let infosMember
-
-        if (!tag) {
-            action = "tag-manquant"
+        let tag, getUser, infosMember
+        try {
+            tag = interaction.options.get("tag").value.replaceAll('#', '').toUpperCase()
+        } catch {
+            if (action !== "list") {
+                action = "tag-manquant"
+            }
         }
 
         switch (action) {
