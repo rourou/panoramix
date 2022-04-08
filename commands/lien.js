@@ -144,7 +144,6 @@ module.exports = {
                 for (const member in allMembers) {
                     if (member !== "timeStamp") {
                         try {
-                            console.log('member:', member)
                             if (allMembers[member].discord === null) {
                                 tabNoLink.push(`${allMembers[member].coc.name} (${member})`)
                             } else {
