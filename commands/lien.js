@@ -53,16 +53,9 @@ module.exports = {
                     tag: `#${tag}`,
                 })
                 //recherche sur COC
-                infosMember = await clash.getPlayer(tag).then((res) => {
-                    console.log('res:', res)
-                    if (res.error) {
-                        return false
-                    }
-                    return res.data
-                }).catch(() => {
-                    return false
-                })
-                if (infosMember) {
+                infosMember = await clash.getPlayer(tag)
+
+                if (infosMember.data !== "N/A") {
                     const add = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
@@ -74,7 +67,7 @@ module.exports = {
                     if (add === "OK") {
                         reponse = {
                             title: `Merci ${interaction.user.username}`,
-                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.name} - ${tag}`
+                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.data.name} - ${tag}`
                         }
                     } else {
                         reponse = {
