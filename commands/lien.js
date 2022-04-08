@@ -66,7 +66,7 @@ module.exports = {
                     if (add === "OK") {
                         reponse = {
                             title: `Merci ${interaction.user.username}`,
-                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.data.name} - ${member.tag}`
+                            value: `J'ai bien enregistré que tu est le chef du village: ${infosMember.data.name} - ${tag}`
                         }
                     } else {
                         reponse = {
