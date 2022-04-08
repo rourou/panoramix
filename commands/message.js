@@ -60,7 +60,7 @@ module.exports = {
                         { name: `---`, value: "c'est fait" }
                     )
 
-                await interaction.editReply({ ephemeral: true, embeds: [embedSuccess] })
+                interaction.editReply({ ephemeral: true, embeds: [embedSuccess] })
             })
             .catch(() => {
                 const embedError = new MessageEmbed()
@@ -69,7 +69,7 @@ module.exports = {
                         { name: `---`, value: "une erreur est survenue" }
                     )
 
-                await interaction.editReply({ ephemeral: true, embeds: [embedError] })
+                interaction.editReply({ ephemeral: true, embeds: [embedError] })
             })
 
 
