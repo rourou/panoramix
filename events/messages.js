@@ -26,13 +26,16 @@ module.exports = {
         if (message.content.toLowerCase() === 'panoramix') {
             console.log("appel panoramix")
 
+            //mise en pause de la reponse
+            await message.deferReply({ ephemeral: true });
+
             const embed = new MessageEmbed()
                 .setColor('#ffffff')
                 .addFields(
                     { name: `Salut`, value: `${message.author.toString()}!` },
                 )
 
-            await message.channel.send({
+            await message.editReply({
                 ephemeral: true, embeds: [embed]
             })/*, fetchReply: true
             })
