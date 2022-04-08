@@ -141,11 +141,13 @@ module.exports = {
                 //all members 
                 const allMembers = await db.getFullDb("dayZero")
                 for (const member in allMembers) {
-                    console.log('member:', member)
-                    if (allMembers[member].discord === null) {
-                        tabNoLink.push(`${allMembers[member].coc.name} (${member})`)
-                    } else {
-                        tabLink.push(`${allMembers[member].coc.name} (${member}) --> ${allMembers[member].discord.username}`)
+                    if (member !== "timeStamp") {
+                        console.log('member:', member)
+                        if (allMembers[member].discord === null) {
+                            tabNoLink.push(`${allMembers[member].coc.name} (${member})`)
+                        } else {
+                            tabLink.push(`${allMembers[member].coc.name} (${member}) --> ${allMembers[member].discord.username}`)
+                        }
                     }
                 }
                 reponse = {
