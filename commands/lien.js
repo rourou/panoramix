@@ -153,28 +153,28 @@ module.exports = {
                     }
                 }
 
-                const embedList = new MessageEmbed()
-                    .setColor('#ffffff')
-                    .setTitle('LIENS')
-
                 //ajout des field de 1024 caractères
 
                 //pour les links
-                embedList.addField('Membres avec liens', `\u200B`)
+                const embedLink = new MessageEmbed()
+                    .setColor('#ffffff')
+                    .setTitle('Membres avec liens')
                 const stringLink = tabLink.join('\n')
                 for (let i = 0; i < stringLink.length; i += 1024) {
                     const cont = stringLink.substring(i, Math.min(stringLink.length, i + 1024));
-                    embedList.addField(`\u200B`, cont);
+                    embedLink.addField(`\u200B`, cont);
                 }
                 //pour les no links
-                embedList.addField('Membres sans liens', `\u200B`)
+                const embedNoLink = new MessageEmbed()
+                    .setColor('#ffffff')
+                    .setTitle('Membres sans liens')
                 const stringNoLink = tabNoLink.join('\n')
                 for (let i = 0; i < stringNoLink.length; i += 1024) {
                     const cont = stringNoLink.substring(i, Math.min(stringNoLink.length, i + 1024));
-                    embedList.addField(`\u200B`, cont);
+                    embedNoLink.addField(`\u200B`, cont);
                 }
 
-                await interaction.editReply({ ephemeral: true, embeds: [embedList] });
+                await interaction.editReply({ ephemeral: true, embeds: [embedLink, embedNoLink] });
                 reply = true
                 break
 
