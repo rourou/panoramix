@@ -7,7 +7,7 @@ const db = require("../datas/db");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('hdv')
-        .setDescription('Recherche des joueurs par HDV !!! execution longue !!!')
+        .setDescription('Recherche des joueurs par HDV (mise à jour tous les 1/2 heures)')
         .addIntegerOption(option =>
             option.setName('hdv')
                 .setDescription(`niveau d'hdv`)

@@ -7,7 +7,7 @@ const db = require("../datas/db");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('super-troupes')
-        .setDescription('Recherche et liste les super troupes activées (mise a jour tous les 1/2 heures')
+        .setDescription('Recherche et liste les super troupes activées (mise à jour tous les 1/2 heures)')
     ,
     async execute(interaction) {
 
@@ -39,6 +39,7 @@ const constructReplyTab = async () => {
     let replyObjet = {}
     for (const member in allMembers) {
         if (member !== "timeStamp") {
+            console.log('allMembers[member]:', allMembers[member])
             for (const troup in allMembers[member].coc.troops) {
                 if (allMembers[member].coc.troops[troup].superTroopIsActive) {
 
