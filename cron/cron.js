@@ -29,13 +29,13 @@ function start(client) {
     //Bonjour du matin
     cron.schedule('00 08 * * *', function () {
         console.log('cron --> Good morning');
-        //goodMorning.run(client)
+        goodMorning.run(client)
     });
 
     //Message du dimanche Soir
     cron.schedule('00 20 * * sunday', function () {
         console.log('cron --> Message du Dimanche');
-        //sunday.run(client)
+        sunday.run(client)
     });
 }
 
