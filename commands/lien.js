@@ -91,9 +91,7 @@ module.exports = {
                     db: "dayZero",
                     tag: `#${tag}`,
                 })
-                //recherche sur COC
-                infosMember = await clash.getPlayer(`${member.tag.replaceAll('#', '').toUpperCase()}`)
-                if (infosMember.data) {
+                if (getUser) {
                     const suppr = await db.addUpdateUser({
                         db: "dayZero",
                         tag: `#${tag}`,
@@ -105,7 +103,7 @@ module.exports = {
                     if (suppr === "OK") {
                         reponse = {
                             title: `Merci ${interaction.user.username}`,
-                            value: `Tu n'est plus le chef du village: ${infosMember.data.name} - ${tag}`
+                            value: `Tu n'est plus le chef du village: ${getUser.coc.name} - ${tag}`
                         }
                     } else {
                         reponse = {
