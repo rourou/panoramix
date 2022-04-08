@@ -14,8 +14,6 @@ const hourly = require('../routines/hourly');
 
 function start(client) {
     console.log('START CRON')
-    //console.log('client:', client)
-    // Schedule tasks to be run on the server.
 
     //taches au demarrage
     //goodMorning(client)
