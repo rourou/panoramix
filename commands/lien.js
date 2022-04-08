@@ -31,6 +31,7 @@ module.exports = {
         //console.log('interaction:', interaction)
 
         await interaction.deferReply({ ephemeral: true });
+        let reply = false
         let reponse = {
             title: "",
             value: ""
@@ -154,10 +155,28 @@ module.exports = {
                         }
                     }
                 }
-                reponse = {
-                    title: "LIENS",
-                    value: `${tabLink.join('\n')}\n${tabNoLink.join('\n')}`
+
+                const embedList = new MessageEmbed()
+                    .setColor('#ffffff')
+                    .setTitle('LIENS')
+
+                //ajout des field de 1024 caractères
+
+                //pour les links
+                const stringLink = tabLink.join('\n')
+                for (let i = 0; i < stringLink.length; i += 1024) {
+                    const cont = stringLink.substring(i, Math.min(stringLink.length, i + 1024));
+                    embedList.addField(" ", cont);
                 }
+                //pour les no links
+                const stringNoLink = tabNoLink.join('\n')
+                for (let i = 0; i < stringNoLink.length; i += 1024) {
+                    const cont = stringNoLink.substring(i, Math.min(stringNoLink.length, i + 1024));
+                    embedList.addField(" ", cont);
+                }
+
+                await interaction.editReply({ ephemeral: true, embeds: [embedList] });
+                reply = true
                 break
 
             /*####################################################################################################################*/
@@ -169,13 +188,16 @@ module.exports = {
                 break;
         }
 
-        const embedBuild = new MessageEmbed()
-            .setColor('#ffffff')
-            .addFields(
-                { name: reponse.title, value: reponse.value },
-            )
+        if (!reply) {
+            const embed = new MessageEmbed()
+                .setColor('#ffffff')
+                .addFields(
+                    { name: reponse.title, value: reponse.value },
+                )
 
-        await interaction.editReply({ ephemeral: true, embeds: [embedBuild] });
+            await interaction.editReply({ ephemeral: true, embeds: [embed] });
+        }
+
 
     },
 };
