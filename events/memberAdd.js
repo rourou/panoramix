@@ -6,6 +6,7 @@ module.exports = {
     name: 'guildMemberAdd',
     once: false,
     async execute(member) {
+        console.log('member:', member)
 
         //console.log('memberAdd:', memberAdd)
         //const channelList = await member.client.channels.cache.map(channel => `${channel.id} - ${channel.name}`)
@@ -37,7 +38,7 @@ module.exports = {
                     .setLabel(`J'accepte et je rejoins l'armée d'Asterix`)
                     .setStyle('SUCCESS'),
             );
-        channel.send({ ephemeral: false, embeds: [embed], components: [row] })
+        //channel.send({ ephemeral: false, embeds: [embed], components: [row] })
 
 
     },
