@@ -6,7 +6,7 @@ module.exports = {
     name: 'guildMemberAdd',
     once: false,
     async execute(member) {
-        console.log('member:', member)
+        //console.log('member:', member)
 
         //console.log('memberAdd:', memberAdd)
         //const channelList = await member.client.channels.cache.map(channel => `${channel.id} - ${channel.name}`)
@@ -21,7 +21,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle(`Bienvenue dans l'Armée d'Astérix !`)
             .setColor(0xffffff)
-            .setDescription(`Salut ${member.user.toString()}\ntoute l'Armée d'Astérix te souhaite la bienvenue !`)
+            .setDescription(`Salut ${member.user.toString()} toute l'Armée d'Astérix te souhaite la bienvenue !`)
             .setThumbnail(member.user.displayAvatarURL())
             .addFields(
                 { name: '\u200B', value: 'Je suis panoramix et je suis un peu le seul sage dans cette famille de fou 😁' },
@@ -39,7 +39,7 @@ module.exports = {
                     .setLabel(`J'accepte et je rejoins l'armée d'Asterix`)
                     .setStyle('SUCCESS'),
             );
-        //channel.send({ ephemeral: false, embeds: [embed], components: [row] })
+        channel.send({ ephemeral: false, embeds: [embed], components: [row] })
 
 
     },
