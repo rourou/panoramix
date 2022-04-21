@@ -21,7 +21,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle(`Bienvenue dans l'Armée d'Astérix !`)
             .setColor(0xffffff)
-            .setDescription(`Salut ${member.user.toString()} toute l'Armée d'Astérix te souhaite la bienvenue !`)
+            .setDescription(`Salut ${member.user.username} toute l'Armée d'Astérix te souhaite la bienvenue !`)
             .setThumbnail(member.user.displayAvatarURL())
             .addFields(
                 { name: '\u200B', value: 'Je suis panoramix et je suis un peu le seul sage dans cette famille de fou 😁' },

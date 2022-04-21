@@ -21,7 +21,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setTitle(`Au revoir !`)
             .setColor(0xffffff)
-            .setDescription(`${member.user.toString()} est parti vers de nouveaux horizons`)
+            .setDescription(`${member.user.username} est parti vers de nouveaux horizons`)
             .setThumbnail(member.user.displayAvatarURL())
         channel.send({ ephemeral: false, embeds: [embed] })
 
